@@ -24,7 +24,7 @@
 
 # Kaptitel 1: Software-Entwicklung, -Wartung und Engineering
 
-### Einleitung
+## Einleitung
 
 * **Software-Engineering** ist die Entwicklung die Pflege und der Einsatz qualitativ hochwertiger Software unter Einsatz von
     * wissenschaftlichen Methoden
@@ -33,7 +33,7 @@
     * Werkzeugen
     * quantifizierbaren Zielen
 
-### Sofware-Qualität
+## Sofware-Qualität
 
 **Ziel der Software-Technik** ist die effiziente Entwicklung messbar qualitativ hochwertiger Software, die
     * gewünschte Funktionalität anbietet
@@ -59,25 +59,25 @@
 * unabhängige QS
     * Überprüfung durch eigenständige QS-Abteilung
 
-* **Konstruktives Qualitätsmanagement zur Fehlervermeidung**
-    * **technische Maßnahmen**
-        * Sprachen (UML, Java etc.)
-        * Tools (IDE, UML-Tools etc.)
-    * **organisatorische Maßnahmen**
-        * Richtlinien
-        * Standards
-        * Checklisten
+#### Konstruktives Qualitätsmanagement zur Fehlervermeidung
+* **technische Maßnahmen**
+    * Sprachen (UML, Java etc.)
+    * Tools (IDE, UML-Tools etc.)
+* **organisatorische Maßnahmen**
+    * Richtlinien
+    * Standards
+    * Checklisten
 
-* **Analytisches Qualitätsmanagement zur Fehleridentifikation**
-    * **analysierende Verfahren**
-        * Review
-        * statische Analyse
-        * formale Verifikation
-    * **testende Verfahren**
-        * dynamischer Test (normale Ausführung mit ganz konkreten Eingaben)
-        * symbolischer Test
+#### Analytisches Qualitätsmanagement zur Fehleridentifikation
+* **analysierende Verfahren**
+    * Review
+    * statische Analyse
+    * formale Verifikation
+* **testende Verfahren**
+    * dynamischer Test (normale Ausführung mit ganz konkreten Eingaben)
+    * symbolischer Test
 
-### Iterative Software-Entwicklung
+## Iterative Software-Entwicklung
 
 * **Wasserfallmodell** (just don't do this)
     * **Probleme**
@@ -92,7 +92,7 @@
 
 * **XP**
 
-### Forward-, Reverse- und Reengineering
+## Forward-, Reverse- und Reengineering
 
 #### Forward Engineering
 
@@ -106,3 +106,4 @@
 #### Reengineering
 * Reengineering befasst sich mit der Software-Sanierung. Dabei werden Ergebnisse des Reverse Engineerings als Ausgangspunkt genommen.
 
+# Kapitel 2
