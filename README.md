@@ -40,7 +40,7 @@
     * benutzerfreundliche Oberfläche besitzt
     * korrekt bzw. zuverlässig arbeitet
 
-##### Qualitätsmerkmale
+#### Qualitätsmerkmale
 * Funktionalität
 * Zuverlässigkeit
 * Benutzbarkeit
@@ -48,7 +48,7 @@
 * Änderbarkeit
 * Übertragbarkeit
 
-##### Prinzipien der Qualitätssicherung
+#### Prinzipien der Qualitätssicherung
 * Qualitätszielbestimmung
 * quantitative QS 
     * Einsatz von Metriktools
@@ -94,15 +94,15 @@
 
 ### Forward-, Reverse- und Reengineering
 
-##### Forward Engineering
+#### Forward Engineering
 
 * Beim **Forward Engineering** ist das fertige Softwaresystem das Ergebnis des Entwicklungsprozesses.
 * **Anforderungen** --> **Design** --> **Code**
 
-##### Reverse Engineering
+#### Reverse Engineering
 * Beim **Reverse Engineering** ist das vorhandene System der Ausgangspunkt der Analyse. Ausgehend von existierender Implementierung wird meist nur das Design rekonstruiert und dokumentiert. Es wird (noch) nicht das betrachtete System modifiziert.
 * **Anforderungen** <-- **Design** <-- **Legacy-Code**
 
-##### Reengineering
+#### Reengineering
 * Reengineering befasst sich mit der Software-Sanierung. Dabei werden Ergebnisse des Reverse Engineerings als Ausgangspunkt genommen.
 
