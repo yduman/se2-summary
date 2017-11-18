@@ -107,3 +107,22 @@
 * Reengineering befasst sich mit der Software-Sanierung. Dabei werden Ergebnisse des Reverse Engineerings als Ausgangspunkt genommen.
 
 # Kapitel 2
+
+## Konfigurationsmanagement (KM)
+
+Beim Konfigurationsmanagement handelt es sich um die Entwicklung und Anwendung von Standards und Verfahren zur Verwaltung eines sich weiterentwickelnden Systems.
+
+#### Werkzeugorientierte Sicht auf KM-Aktivitäten
+
+* **KM-Planung**
+    * Beschreibung der Standards, Verfahren und Werkzeuge, die für KM benutzt werden; wer darf/muss wann was machen
+* **Versionsmanagement**
+    * Verwaltung der Entwicklungsgeschichte eines Produkts; also wer hat wann, wo, was und warum geändert
+* **Variantenmangement**
+    * Verwaltung parallel existierender Ausprägungen eines Produkts für verschiedene Anforderungen, Länder, Plattformen
+* **Releasemangement**
+    * Verwaltung und Planung von Auslieferungsständen; wann wird eine neue Produktversion mit welchen Features auf den Markt geworfen
+* **Buildmanagement**
+    * Erzeugung des auszuliefernden Produkts; wann muss welche Datei mit welchem Werkzeug generiert, übersetzt, ... werden
+* **Änderungsmanagement**
+    * Verwaltung von Änderungsanforderungen; also Bearbeitung von Fehlermeldungen und Änderungswünschen (Feature Requests) sowie Zuordnung zu Auslieferungsständen
