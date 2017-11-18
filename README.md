@@ -126,3 +126,6 @@ Beim Konfigurationsmanagement handelt es sich um die Entwicklung und Anwendung v
     * Erzeugung des auszuliefernden Produkts; wann muss welche Datei mit welchem Werkzeug generiert, übersetzt, ... werden
 * **Änderungsmanagement**
     * Verwaltung von Änderungsanforderungen; also Bearbeitung von Fehlermeldungen und Änderungswünschen (Feature Requests) sowie Zuordnung zu Auslieferungsständen
+
+
+test
