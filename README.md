@@ -278,3 +278,17 @@ Die Definition von Software-Maßen basiert auf dem Wunsch, einen quantitativen Z
     * die Anzahl der in einer Klasse gerufenen Methoden "fremder" Klassen.
 * Attribute Complexity (AC)
     * die gewichtete Summe der Attribute einer Klasse wird gebildet; Gewichte werden gemäß Typen/Klassen der Attribute vergeben.
+
+# Kapitel 4: Dynamische Programmanalysen und Testen
+
+## Einleitung
+
+#### Fehlerzustand, Fehlerwirkung und Fehlhandlung
+
+* Fehlerzustand (fault) - direkt erkennbar durch statische Tests
+    * inkorrektes Teilprogramm, Anweisung, Definition
+* Fehlerwirkung (failure) - direkt erkennbar durch dynamische Tests
+    * Wirkung eines Fehlerzustandes, die bei der Ausführung des Testobjektes nach "außen" in Erscheinung tritt
+    * Abweichung zwischen speizifiziertem Soll-Wert und beobachtetem Ist-Wert
+* Fehlhandlung (error)
+    * menschliche Handlung, die zu einem Fehlerzustand in der Software führt (vom Entwickler und nicht vom Anwender)
