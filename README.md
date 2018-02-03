@@ -22,7 +22,7 @@
     - testende Verfahren (z.B. dynamische Tests, symbolische Tests)
   - unabhängige QS (durch QA-Team)
 
-### Iterative SW-Entwicklung
+### 1.3 Iterative SW-Entwicklung
 
 **Wasserfallmodell**
 ![Wasserfallmodell](./assets/wasserfall.png)
