@@ -25,22 +25,22 @@
 ### 1.3 Iterative SW-Entwicklung
 
 **Wasserfallmodell**
-![Wasserfallmodell](./assets/wasserfall.png)
+![Wasserfallmodell](./assets/wasserfall.PNG)
 
 * Wasserfallmodell ist crap, weil ...
     * strikte Phaseneinteilung ist unrealistisch
     * Anforderungen sind zu Beginn unklar und ändern sich ständig
 
 **V-Modell**
-![V-Modell](./assets/v-modell.png)
+![V-Modell](./assets/v-modell.PNG)
 
 ### 1.4 Forward-, Reverse- und Reengineering
 
 * Forward-Engineering
-    * ![Forward-Engineering](./assets/forward-engineering.png)
+    * ![Forward-Engineering](./assets/forward-engineering.PNG)
 
 * Reverse-Engineering
-    * ![Reverse-Engineering](./assets/reverse-engineering.png)
+    * ![Reverse-Engineering](./assets/reverse-engineering.PNG)
 
 * Reengineering
-    * ![Reengineering](./assets/reengineering.png)
+    * ![Reengineering](./assets/reengineering.PNG)
