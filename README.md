@@ -1,6 +1,6 @@
 # Kap. 1: SW-Entwicklung, -Wartung & (Re-)Engineering
 
-### 1.2 SW-Qualität
+## 1.2 SW-Qualität
 
 - Qualität ist der Grad, indem ein System die Kundenerwartungen und Kundenbedürfnisse erfüllt.
 - **Qualitätsmerkmale**: Funktionalität
@@ -22,25 +22,25 @@
     - testende Verfahren (z.B. dynamische Tests, symbolische Tests)
   - unabhängige QS (durch QA-Team)
 
-### 1.3 Iterative SW-Entwicklung
+## 1.3 Iterative SW-Entwicklung
 
-**Wasserfallmodell**
-![Wasserfallmodell](./assets/wasserfall.PNG)
+* **Wasserfallmodell**
+    * <img src="./assets/wasserfall.PNG" width="500">
 
 * Wasserfallmodell ist crap, weil ...
     * strikte Phaseneinteilung ist unrealistisch
     * Anforderungen sind zu Beginn unklar und ändern sich ständig
 
-**V-Modell**
-![V-Modell](./assets/v-modell.PNG)
+* **V-Modell**
+    * <img src="./assets/v-modell.PNG" width="500">
 
-### 1.4 Forward-, Reverse- und Reengineering
+## 1.4 Forward-, Reverse- und Reengineering
 
 * Forward-Engineering
-    * ![Forward-Engineering](./assets/forward-engineering.PNG)
+    * <img src="./assets/forward-engineering.PNG" width="400">
 
 * Reverse-Engineering
-    * ![Reverse-Engineering](./assets/reverse-engineering.PNG)
+    * <img src="./assets/reverse-engineering.PNG" width="400">
 
 * Reengineering
-    * ![Reengineering](./assets/reengineering.PNG)
+    * <img src="./assets/reengineering.PNG" width="400">
