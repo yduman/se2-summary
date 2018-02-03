@@ -1,4 +1,4 @@
-# Kap. 1: SW-Entwicklung, -Wartung & (Re-)Engineering
+# (1) SW-Entwicklung, -Wartung & (Re-)Engineering
 
 ## 1.2 SW-Qualität
 
