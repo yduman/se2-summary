@@ -1,5 +1,7 @@
+# Table of Content
 <!-- TOC -->
 
+- [Table of Content](#table-of-content)
 - [1. SW-Entwicklung, -Wartung & (Re-)Engineering](#1-sw-entwicklung--wartung--re-engineering)
   - [1.2 SW-Qualität](#12-sw-qualität)
   - [1.3 Iterative SW-Entwicklung](#13-iterative-sw-entwicklung)
