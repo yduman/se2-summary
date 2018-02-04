@@ -64,6 +64,9 @@
       - [Checkliste für Klassentests](#checkliste-für-klassentests)
   - [4.7 Mutationsbasierte Testverfahren](#47-mutationsbasierte-testverfahren)
   - [4.8 Testmanagement und Testwerkzeuge](#48-testmanagement-und-testwerkzeuge)
+      - [Aufgaben, Qualifikationen und Rollen](#aufgaben-qualifikationen-und-rollen)
+      - [Weiter Aspekte des Testmanagements](#weiter-aspekte-des-testmanagements)
+- [5. Management der Software-Entwicklung](#5-management-der-software-entwicklung)
 
 <!-- /TOC -->
 
@@ -550,4 +553,32 @@ Heute läuft es folgendermaßen ab:
 ## 4.8 Testmanagement und Testwerkzeuge
 
 <img src="./assets/testmanagement.PNG" width="200">
+
+#### Aufgaben, Qualifikationen und Rollen
+
+* Testmanager (Leiter)
+    * ist für Testplanung sowie Auswahl von Testwerkzeugen zuständig und vertritt Testinteressen gegenüber Projektmanagern
+* Testdesigner (Analyst)
+    * erstellt Testspezifikationen und ermittelt Testdaten
+* Testautomatisierer
+    * realisiert die automatisierte Durchführung der spezifizierten Testfälle durch ausgewählte Testwerkzeuge
+* Testadministrator
+    * stellt die Testumgebung mit ausgewählten Testwerkzeugen zur Verfügung
+* Tester
+    * ist für Testdurchführung, -protokollierung und -auswertung zuständig
+
+#### Weiter Aspekte des Testmanagements
+
+* Betrachtung von Kosten- und Wirtschaftlichkeitsaspekten
+    * Ermittlung und Abschätzung von Fehlerkosten
+    * Ermittlung und Abschätzung von Testkosten/Testaufwand
+* Wahl einer Teststrategie
+    * proaktiv vs. reaktiv
+    * Testerstellungsansatz / Überdeckungskriterien / ...
+    * Orientierung an Standards für Vorgehensmodelle
+* Testen und Risiko
+    * Risiken beim Testen (Ausfall von Personal, ...)
+    * Risikobasiertes Testen (Fokus auf Minimierung von Produktrisiken)
+
+# 5. Management der Software-Entwicklung
 
