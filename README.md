@@ -65,7 +65,7 @@
   - [4.7 Mutationsbasierte Testverfahren](#47-mutationsbasierte-testverfahren)
   - [4.8 Testmanagement und Testwerkzeuge](#48-testmanagement-und-testwerkzeuge)
       - [Aufgaben, Qualifikationen und Rollen](#aufgaben-qualifikationen-und-rollen)
-      - [Weiter Aspekte des Testmanagements](#weiter-aspekte-des-testmanagements)
+      - [Weitere Aspekte des Testmanagements](#weitere-aspekte-des-testmanagements)
 - [5. Management der Software-Entwicklung](#5-management-der-software-entwicklung)
 
 <!-- /TOC -->
@@ -567,7 +567,7 @@ Heute läuft es folgendermaßen ab:
 * Tester
     * ist für Testdurchführung, -protokollierung und -auswertung zuständig
 
-#### Weiter Aspekte des Testmanagements
+#### Weitere Aspekte des Testmanagements
 
 * Betrachtung von Kosten- und Wirtschaftlichkeitsaspekten
     * Ermittlung und Abschätzung von Fehlerkosten
