@@ -549,5 +549,5 @@ Heute läuft es folgendermaßen ab:
 
 ## 4.8 Testmanagement und Testwerkzeuge
 
-<img src="./assets/testmanagement.PNG" width="170" style="margin-left: 8em;">
+<img src="./assets/testmanagement.PNG" width="200">
 
