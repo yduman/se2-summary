@@ -582,3 +582,7 @@ Heute läuft es folgendermaßen ab:
 
 # 5. Management der Software-Entwicklung
 
+* Agile Entwicklung
+* TDD
+* Clean Code
+* Scrum
