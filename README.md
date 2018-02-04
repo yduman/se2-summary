@@ -45,6 +45,25 @@
       - [Efferent Coupling (EC)](#efferent-coupling-ec)
       - [Instabilität (I)](#instabilität-i)
 - [4. Dynamische Programmanalysen und Testen](#4-dynamische-programmanalysen-und-testen)
+  - [4.1 Einleitung](#41-einleitung)
+      - [Fehlerzustand, Fehlerwirkung und Fehlhandlung](#fehlerzustand-fehlerwirkung-und-fehlhandlung)
+      - [Typische Programmierfehler](#typische-programmierfehler)
+      - [Aufbau eines Testrahmens](#aufbau-eines-testrahmens)
+      - [Was wird getestet?](#was-wird-getestet)
+      - [Wie wird getestet?](#wie-wird-getestet)
+      - [Testprozess](#testprozess)
+      - [Integrationsteststrategien](#integrationsteststrategien)
+      - [Systemtest](#systemtest)
+      - [Die sieben Grundsätze des Testens](#die-sieben-grundsätze-des-testens)
+  - [4.2 Laufzeit- und Speicherplatzverbrauchsmessungen](#42-laufzeit--und-speicherplatzverbrauchsmessungen)
+  - [4.3 Funktionsorientierte Testverfahren (Black Box Testing)](#43-funktionsorientierte-testverfahren-black-box-testing)
+  - [4.4 Kontrollflussbasierte Testverfahren (White Box Testing)](#44-kontrollflussbasierte-testverfahren-white-box-testing)
+  - [4.5 Datenflussbasierte Testverfahren](#45-datenflussbasierte-testverfahren)
+  - [4.6 Testen von OO-Programmen](#46-testen-von-oo-programmen)
+      - [Tabellarische Übersicht über verschiedene Arten von Klassen beim Testen](#tabellarische-übersicht-über-verschiedene-arten-von-klassen-beim-testen)
+      - [Checkliste für Klassentests](#checkliste-für-klassentests)
+  - [4.7 Mutationsbasierte Testverfahren](#47-mutationsbasierte-testverfahren)
+  - [4.8 Testmanagement und Testwerkzeuge](#48-testmanagement-und-testwerkzeuge)
 
 <!-- /TOC -->
 
@@ -368,3 +387,167 @@ Heute läuft es folgendermaßen ab:
 * Der undefinierte Fall `AC = 0 && EC = 0` kann nur auf ein sinnloses isoliertes Teilsystem zutreffen, das weder importiert noch exportiert
 
 # 4. Dynamische Programmanalysen und Testen
+
+## 4.1 Einleitung
+
+#### Fehlerzustand, Fehlerwirkung und Fehlhandlung
+
+* Fehlerzustand (fault)
+    * direkt erkennbar durch statische Tests
+    * inkorrektes Teilprogramm, Anweisung oder Datendefinition
+* Fehlerwirkung (failure)
+    * direk erkennbar durch dynamische Tests
+    * Wirkung eines Fehlerzustandes, die bei der Ausführung des Testobjektes nach außen in Erscheinung tritt
+    * Abweichung zwischen Soll- und Ist-Wert
+* Fehlhandlung (error)
+    * menschliche Handlung (des Entwicklers), die zu einem Fehlerzustand in der SW führt
+    * menschliche Handlung (des Anwenders) gehört hier **nicht** dazu
+
+#### Typische Programmierfehler
+* Berechnungsfehler
+* Schnittstellenfehler
+* Kontrollflussfehler
+* Datenflussfehler
+* Zeitfehler
+* Redefinitionsfehler
+
+#### Aufbau eines Testrahmens
+
+<img src="./assets/testrahmen.PNG" width="500">
+
+#### Was wird getestet?
+
+* Funktionalitätstest: I/O-Verhalten
+* Benutzbarkeittest: gute UI
+* Performanztest: ineffiziente Programmteile oder memory leaks
+* Lasttest: Verarbeitung von großen Datenmengen innerhalb des zugelassenen Bereichs
+* Stresstest: Verarbeitung von großen Datenmengen außerhalb des zugelassenen Bereichs
+
+#### Wie wird getestet?
+
+* Funktionstest (black box test)
+* Strukturtest (white box test)
+* Diversifikationstest
+    * Mutationstest
+    * N-Versionen-Programmierung
+
+#### Testprozess
+
+<img src="./assets/testprozess.PNG" width="500">
+
+#### Integrationsteststrategien
+
+* Betracht das Testsystem als Baum mit A als Wurzel und B, C und D als Blattknoten
+
+* "Big Bang"-Strategie
+    * alle Teile sofort integrieren und nur als Gesamtheit testen
+    * Lokalisierung von Fehlern ist schwierig
+    * Arbeitsteilung kaum möglich
+    * Testen beginnt zu spät
+* "Top-down"-Testverfahren
+    * A mit Dummies für B, C und D
+    * Erstellung vernünftiger Dummies schwierig
+    * Test der Basisschicht sehr spät
+* "Bottom-up"-Testverfahren
+    * B, C und D mit Testtreibern, die Einbindung in A simulieren
+    * Test des Gesamtverhaltens des Systems gegen Lastenheft erst am Ende
+    * Designfehler und Effizienzprobleme werden oft erst spät entdeckt
+* Inkrementelles Testen
+    * Grundgerüst ist vorhanden und weitere Komponenten werden stückweise hinzugefügt
+    * wie erstellt und testet man Grundgerüst?
+    * Hinzufügen von Komponenten kann bisherige Testwerte entwerten
+* Regressionstest
+    * Systemänderungen können Fehler in bereits getesteten Funktionen verursachen
+    * möglichst viele Tests werden automatisiert
+    * bei jeder Änderung werden alle vorhandenen Tests durchgeführt
+* Heute macht man eine Kombination aus Inkrementellem Testen + Regressionstest
+
+#### Systemtest
+
+* Systemtests werden durch den Kunden in einer Testumgebung durchgeführt. Beim Testen werden auch die tatsächlichen Geschäftsprozesse berücksichtigt
+* Nichtfunktionale Anforderungen
+    * Lasttest
+    * Performanztest
+    * Kompatibilität
+    * Benutzerfreundlichkeit
+    * Benutzerdokumentation
+    * Änderbarkeit, Wartbarkeit
+
+#### Die sieben Grundsätze des Testens
+* Testen zeigt die Anwesenheit von Fehlern und nie die Abwesenheit
+* Vollständiges Testen ist nicht möglich
+* Mit dem Testen frühzeitig beginnen
+* Häufung von Fehlern
+* Zunehmende Testresistenz gegen existierende Tests
+* Testen ist abhängig vom Umfeld
+* **Trugschluss**: Keine Fehler bedeutet ein brauchbares System
+
+## 4.2 Laufzeit- und Speicherplatzverbrauchsmessungen
+
+* wie oft wird jede Operation aufgerufen
+* welche Operation ruft wie oft andere Operationen (**descendants**) auf oder von welchen Operationen (**callers**) wird ein Programm wie oft aufgerufen?
+* wie viel Prozent der Gesamtlaufzeit wird mit Ausführung einer bestimmten Operation verbracht?
+* Mit Hilfe der Daten kann man:
+    * Operationen, die am meisten Laufzeit in Anspruch nehmen, können leicht identifiziert und optimiert werden
+    * tatsächliche Aufrufabhängigkeiten werden sofort sichtbar
+
+## 4.3 Funktionsorientierte Testverfahren (Black Box Testing)
+
+* Sie testen Implementierung gegen ihre Spezifikation und lassen die interne Programmstruktur unberücksichtigt (Programm wird als "black box" behandelt)<br><br>
+<img src="./assets/blackbox.PNG" width="400">
+
+* Testverfahren
+    * Bildung von Äquivalenzklassen
+    * Zufallstest
+    * Smoke-Test
+    * Syntax-Test
+    * Zustandsbezogener-Test
+    * Ursache-Wirkung-Graph-Analyse
+    * Anwendungsfallbasiertes Testen
+
+## 4.4 Kontrollflussbasierte Testverfahren (White Box Testing)
+
+* Mit im Grunde zunächste beliebigen Verfahren werden Tests geschrieben
+* Diese Tests werden ausgeführt und es wird beobachtet welche Teile des Programms durchlaufen werden
+* Schließlich wird festgelegt, ob die Tests den Kontrollfluss des Programms hinreichend überdecken
+* ggf. werden so lange neue Tests geschrieben, bis eine hinreichende Überdeckung des Codes erreicht wurde (code coverage)
+* ggf. werden alte Tests gelöscht, die dieselben Teile des Codes überdecken
+
+## 4.5 Datenflussbasierte Testverfahren
+
+* Ausgangspunkt ist der Datenflussgraph einer Komponente bzw. der mit Datenflussattributen annotierte Kontrollflussgraph. Bei der Auswahl von Testfällen wird darauf geachtet, dass:
+    * für jede Zuweisung eines Wertes an eine Varibale **mindestens eine** Benutzung dieses Wertes getestet wird
+    * oder für jede Zuweisung eines Wertes an eine Variable **alle** Benutzungen dieses Wertes getestet werden
+
+* Vor- und Nachteile
+    * Pro
+        * einige Verfahren enthalten Zweigüberdeckungen und finden sowohl Datenflussfehler als auch Kontrollflussfehler
+        * Besser geeignet für OO-Programme mit oft einfach Kontrollfluss aber komplexem Datenfluss
+    * Contra
+        * Es gibt kaum Werkzeuge, die datenflussbasierte Testverfahren unterstützen
+
+## 4.6 Testen von OO-Programmen
+
+#### Tabellarische Übersicht über verschiedene Arten von Klassen beim Testen
+
+<img src="./assets/ootest.PNG" width="500">
+
+#### Checkliste für Klassentests
+
+* jede Methode (auch geerbte) wird mind. einmal ausgeführt
+* alle Methodenparameter und alle nach außen sichtbaren Attribute werden mit geeigneter Äquivalenzklassenbildung durchgetestet
+* alle auslösbaren Exceptions werden mind. einmal ausgelöst
+* alle identifizierten Objektzustände werden beim Testen erreicht
+* jede zustandsabhängige Methode wird in jedem Zustand ausgeführt
+* alle möglichen Zustandsübergänge werden aktiviert
+
+## 4.7 Mutationsbasierte Testverfahren
+
+* Reachability Condition
+* Infection Condition
+* Propagation Condition
+
+## 4.8 Testmanagement und Testwerkzeuge
+
+<img src="./assets/testmanagement.PNG" width="170" style="margin-left: 8em;">
+
